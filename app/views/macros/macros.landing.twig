@@ -52,7 +52,7 @@
       <ul class="social">
         {% for item in options.social %}
           <li class="social__item">
-            <a href="{{item.link}}">{{landing.image(item.image, options.title|striptags, 'social__item-image')}}</a>
+            <a href="{{item.link}}" target="_blank">{{landing.image(item.image, options.title|striptags, 'social__item-image')}}</a>
           </li>
         {% endfor %}
       </ul>
