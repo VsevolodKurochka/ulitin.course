@@ -13,7 +13,7 @@
   {% import "macros/macros.form.twig" as form %}
   <section class="greeting">
     <div class="greeting__header">
-      <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__logo">
+      <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__header-logo">
       <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
         <input type="hidden" name="campaign_token" value="{{options.campaign_token}}" />
         <div class="form__content">
