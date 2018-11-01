@@ -2,13 +2,13 @@
 {% import 'macros/macros.landing.twig' as landing %}
 {% extends 'layouts/base.twig' %}
 
-{% set title = 'Title' %}
-{% set description = 'description' %}
-{% set image = 'img/logo.png' %}
-{% set url = 'url' %}
+{% set meta_title = title|striptags %}
+{% set meta_description = 'description' %}
+{% set meta_image = 'img/logo.png' %}
+{% set meta_url = 'url' %}
 
 {% block meta %}
-{{ macros.meta(title, description, image, url) }}
+{{ macros.meta(meta_title, meta_description, meta_image, meta_url) }}
 {% endblock %}
 
 {% block css %}
