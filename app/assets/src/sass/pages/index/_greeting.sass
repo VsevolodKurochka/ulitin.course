@@ -12,6 +12,19 @@
 		+min(sm)
 			grid-row: 1 / 4
 
+		&-header
+			+r()
+			+fs(0)
+			&:before
+				content: ""
+				+a(0, 0)
+				+size(100%)
+				+bgc(#424158)
+				opacity: 0.75
+
 	&__text
 		+min(sm)
 			grid-row: 1 / 4
+
+	&__footer
+		+bgc(#f5f5f6)
