@@ -8,8 +8,10 @@
 		+d(grid)
 		+h(100vh)
 		min-height: 600px
-		grid-template-columns: 17.5% 50% 32.5%
+		grid-template-columns: 25% 42% 33%
 		grid-template-rows: repeat(3, 33.3333%)
+	+min(md)
+		grid-template-columns: 17.5% 50% 32.5%
 
 	&__header
 		@extend %greeting-header-footer-padding
@@ -98,15 +100,19 @@
 					content: "”"
 					+c(inherit)
 			+min(sm)
-				+mt(-10%)
+				+mt(-15%)
 				+fs(4vmax)
-				+pl(30px)
+				+pl(2vmax)
+			+min(md)
+				+mt(-10%)
 
 		&-subtitle
 			text-transform: uppercase
 			+fw(100)
 			line-height: 1.2
 			+fs(16px)
+			+min(sm)
+				+fs(1vmax)
 
 		&-name
 			text-transform: uppercase
@@ -143,7 +149,7 @@
 			max-width: 60%
 		li
 			+offset('b', 15px)
-			+fs(18px)
+			+fs(14px)
 			&:nth-child(even)
 				+fw(bold)
 			+min(md)
