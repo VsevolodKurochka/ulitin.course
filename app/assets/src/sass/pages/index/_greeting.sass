@@ -82,9 +82,19 @@
 			line-height: 1.1
 			text-transform: uppercase
 			+c($color-white)
+			&:before
+				content: "“"
+				+a(0, null, null, 0)
+				+c($color-white)
+
+			span
+				&:after
+					content: "”"
+					+c(inherit)
 			+min(sm)
 				+mt(-10%)
 				+fs(4vmax)
+				+pl(30px)
 
 		&-subtitle
 			text-transform: uppercase
