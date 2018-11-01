@@ -33,6 +33,7 @@
 			+r()
 			+fs(0)
 			overflow: hidden
+			z-index: 1
 			+min(sm)
 				+h(66.6%)
 
@@ -42,10 +43,14 @@
 				+size(100%)
 				+bgc(#424158)
 				opacity: 0.75
+				z-index: 1
 
 			&-image
 				+size(100%)
 				object-fit: cover
+				+tr()
+			&:hover &-image
+				transform: scale(1.1)
 
 			&-btn
 				+a(50%, null, null, 50%)
@@ -56,6 +61,7 @@
 				border: none
 				+bgi('../img/icon-play.svg')
 				+tr()
+				z-index: 2
 				&:hover
 					transform: scale(0.9)
 
