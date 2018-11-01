@@ -32,11 +32,11 @@
       <div class="greeting__content-header">
         {{landing.image('img/greeting-image.jpg', options.title|striptags, 'greeting__content-header-image')}}
       </div>
-      <h1 class="greeting__content-title">{{options.title}}</h1>
+      <h1 class="greeting__content-title">{{options.title|raw}}</h1>
       <h2 class="greeting__content-subtitle">{{options.subtitle}}</h2>
       <h3 class="greeting__content-name">{{options.name}}</h3>
     </div>
-    <div class="greeting__text bg-brand-#{options.brand}">
+    <div class="greeting__text bg-brand-{{options.brand}}">
       <ul class="greeting__list">
         {% for li in options.list %}
           <li>{{li}}</li>
