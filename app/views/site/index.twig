@@ -1,0 +1,32 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% import 'macros/macros.landing.twig' as landing %}
+{% extends 'layouts/base.twig' %}
+
+{% set title = 'Title' %}
+{% set description = 'description' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/scripts.min.js") }}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+{{
+  landing.greeting()
+}}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
