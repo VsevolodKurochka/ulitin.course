@@ -24,7 +24,12 @@
 
 {% block content %}
 {{
-  landing.greeting()
+  landing.greeting({
+    'brand': brand,
+    'logo': 'img/logo.png',
+    'form': form,
+    'title': "“Искусство<br><span class='color-brand-#{brand}'>быть первой”</span>",
+  })
 }}
 {% endblock %}
 

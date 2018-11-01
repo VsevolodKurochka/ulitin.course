@@ -8,8 +8,24 @@
   {{form.button('button', "#{default} #{class}", text, attributes)}}
 {% endmacro %}
 
-{% macro greeting() %}
+{% macro greeting(options) %}
+  {% import "macros/macros.form.twig" as form %}
   <section class="greeting">
-    <h1>Greeting</h1>
+    <div class="greeting__header">
+      <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__logo">
+      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
+        <input type="hidden" name="campaign_token" value="{{options.campaign_token}}" />
+        <div class="form__content">
+          {% for input in options.form %}
+            <div class="form__row">
+              {{ form.input(input.name, input.value, input.type, input.attributes) }}
+            </div>
+          {% endfor %}
+          <div class="form__row">
+            {{ form.button("submit", "form__submit btn btn_lg btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
+          </div>
+        </div>
+      </form>
+    </div>
   </section>
 {% endmacro %}

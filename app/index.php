@@ -1,5 +1,9 @@
 <?php
   require_once 'connect.php';
-  
-  echo $twig->render('site/index.twig');
+  include 'form.php';
+
+  echo $twig->render('site/index.twig', array(
+		'form' => $form,
+		'brand'	=> '1',
+	));
 ?>
