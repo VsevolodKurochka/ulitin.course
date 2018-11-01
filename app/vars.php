@@ -30,4 +30,23 @@
 			)
 		)
 	);
+
+	$social = array(
+		array(
+			'image'	=> 'img/icon-inst.png',
+			'link'	=> 'https://www.instagram.com/markbarton_mb/'
+		),
+		array(
+			'image'	=> 'img/icon-vk.png',
+			'link'	=> 'https://vk.com/mark_barton'
+		),
+		array(
+			'image'	=> 'img/icon-fb.png',
+			'link'	=> 'https://www.facebook.com/markbartonrf/'
+		),
+		array(
+			'image'	=> 'img/icon-youtube.png',
+			'link'	=> 'https://www.youtube.com/channel/UCdliAx3gHPrWju5VPetxWEw'
+		)
+	);
 ?>

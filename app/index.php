@@ -1,9 +1,10 @@
 <?php
   require_once 'connect.php';
-  include 'form.php';
+  include 'vars.php';
 
   echo $twig->render('site/index.twig', array(
-		'form' => $form,
-		'brand'	=> '1',
+  	'brand'			=> '1',
+		'form' 			=> $form,
+		'social'		=> $social
 	));
 ?>
