@@ -99,6 +99,7 @@
 			+min(sm)
 				+fs(2.5vmax)
 	&__text
+		+py(40px)
 		+c($color-white)
 		+min(sm)
 			+row()
@@ -113,7 +114,7 @@
 		&:before,
 		&:after
 			content: ""
-			+a()
+			+a(null, null, null, 0)
 			+size(30%, 2px)
 			+bgc($color-white)
 		&:before
