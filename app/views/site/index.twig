@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block css %}
-{{ macros.css("https://fonts.googleapis.com/css?family=Cormorant+SC:700|Ubuntu:300,700&amp;subset=cyrillic")}}
-{{ macros.css("css/style.min.css") }}
+{{ macros.css(false, "https://fonts.googleapis.com/css?family=Cormorant+SC:700|Ubuntu:300,700&amp;subset=cyrillic")}}
+{{ macros.css(true, "css/style.min.css") }}
 {% endblock %}
 
 {% block js %}

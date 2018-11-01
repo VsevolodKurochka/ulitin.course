@@ -27,12 +27,7 @@
 			+fs(0)
 			overflow: hidden
 			+min(sm)
-
 				+h(67%)
-
-			&-image
-				+size(100%)
-				object-fit: cover
 
 			&:before
 				content: ""
@@ -40,6 +35,22 @@
 				+size(100%)
 				+bgc(#424158)
 				opacity: 0.75
+
+			&-image
+				+size(100%)
+				object-fit: cover
+
+			&-btn
+				+a(50%, null, null, 50%)
+				
+				+size(82px, 66px)
+				+mt(-41px)
+				+ml(-33px)
+				border: none
+				+bgi('../img/icon-play.svg')
+				+tr()
+				&:hover
+					transform: scale(0.9)
 
 		&-body
 			padding: 15px
@@ -65,7 +76,7 @@
 			text-transform: uppercase
 			+c($color-white)
 			+min(sm)
-				+mt(-9%)
+				+mt(-10%)
 				+fs(4vmax)
 
 		&-subtitle

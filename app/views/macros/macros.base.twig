@@ -2,8 +2,12 @@
   <script src="{{path}}/{{src}}"></script>
 {% endmacro %}
 
-{% macro css(href) %}
-  <link rel="stylesheet" href="{{path}}/{{href}}">
+{% macro css(style_path, href) %}
+  {% if style_path %}
+    <link rel="stylesheet" href="{{path}}/{{href}}">
+  {% else %}
+    <link rel="stylesheet" href="{{href}}">
+  {% endif %}
 {% endmacro %}
 
 {% macro meta(title, description, image, url) %}

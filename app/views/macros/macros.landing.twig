@@ -30,6 +30,7 @@
     </div>
     <div class="greeting__content">
       <div class="greeting__content-header">
+        <button class="greeting__content-header-btn" data-action="modal" data-open="#modal-video"></button>
         {{landing.image('img/greeting-image.jpg', options.title|striptags, 'greeting__content-header-image')}}
       </div>
       <div class="greeting__content-body">
@@ -57,4 +58,14 @@
       </ul>
     </div>
   </section>
+  <div class="modal" id="modal-video">
+    <div class="modal__box modal__box_medium modal__box_transparent">
+      <div class="modal__header">
+        <button class="modal__close" data-close="modal">&times;</button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__video"></div>
+      </div>
+    </div>
+  </div>
 {% endmacro %}
