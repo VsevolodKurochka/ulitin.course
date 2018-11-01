@@ -38,6 +38,51 @@
 				+bgc(#424158)
 				opacity: 0.75
 
+		&-body
+			padding: 15px
+			+min(sm)
+				+row()
+				+h(33%)
+
+			+min(md)
+				+pl(45px)
+				+pb(45px)
+
+			&-group
+				+min(sm)
+					+ml(37px)
+					align-self: flex-end
+
+		&-title
+			+r()
+			z-index: 1
+			+fs(30px)
+			+mb(15px)
+			+fw(bold)
+			line-height: 1.1
+			text-transform: uppercase
+			+c($color-white)
+			+min(sm)
+				+mt(-95px)
+				+fs(4vmax)
+				span
+					+ml(37px)
+
+		&-subtitle
+			text-transform: uppercase
+			+fw(100)
+			line-height: 1.2
+			+fs(16px)
+
+		&-name
+			text-transform: uppercase
+			+fw(bold)
+			+fs(20px)
+			+min(sm)
+				+fs(2.5vmax)
+
+
+
 	&__text
 		+c($color-white)
 		+min(sm)
