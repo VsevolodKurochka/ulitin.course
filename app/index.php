@@ -8,7 +8,7 @@
   	'brand'			=> $brand,
   	'logo'			=> 'img/logo.png',
   	'video'			=> 'https://www.youtube.com/embed/H-7upfqm40w',
-  	'title'			=> "Искусство <br><span class='color-brand-$brand'>быть первой</span>",
+  	'title'			=> "Искусство <br>быть первой",
   	'subtitle'	=> 'Бесплатный видео-курс',
   	'name'			=> 'Марка Бартона',
   	'list'			=> array(
