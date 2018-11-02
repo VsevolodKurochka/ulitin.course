@@ -84,12 +84,9 @@
 			&:before
 				content: "“"
 				+a(0, null, null, 0)
-				+c($color-white)
-
-			span
-				&:after
-					content: "”"
-					+c(inherit)
+			&:after
+				content: "”"
+				+c(inherit)
 			+min(sm)
 				+mt(-15%)
 				+fs(4vmax)
