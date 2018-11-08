@@ -79,13 +79,13 @@
 		&-title
 			+r()
 			z-index: 1
-			+mb(15px)
+			+mb(2px)
 			+fs(30px)
 			+fw(bold)
 			+lh(1.1)
 			text-transform: uppercase
 			+min(sm)
-				+fs(3.5vmax)
+				+fs(3.2vmax)
 
 		&-subtitle
 			text-transform: uppercase
@@ -100,8 +100,10 @@
 			+fw(bold)
 			+fs(25px)
 			+ff('secondary')
+			+lh(1.1)
 			+min(sm)
-				+fs(2vmax)
+				+fs(1.8vmax)
+
 	&__text
 		padding: 30px 15px
 		+c($color-white)
@@ -114,9 +116,10 @@
 			+mb(15px)
 			text-transform: uppercase
 			+ff('secondary')
+			+lh(1.2)
 			+min(sm)
-				+mb(2vmax)
-				+fs(1.5vmax)
+				+mb(1.5vmax)
+				+fs(1.4vmax)
 
 		&-list
 			+r()
@@ -125,14 +128,14 @@
 			&:after
 				content: ""
 				+a(null, null, null, 0)
-				+size(30%, 2px)
+				+size(100%, 1px)
 				+bgc($color-white)
 
 			&:after
 				+b(0)
 
 			+min(md)
-				+pb(3vmax)
+				+pb(2vmax)
 				max-width: 90%
 
 			&-item
