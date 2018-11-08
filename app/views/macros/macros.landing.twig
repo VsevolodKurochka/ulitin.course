@@ -14,19 +14,6 @@
   <section class="greeting">
     <div class="greeting__header">
       <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__header-logo">
-      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
-        <input type="hidden" name="campaign_token" value="{{options.campaign_token}}" />
-        <div class="form__content">
-          {% for input in options.form %}
-            <div class="form__row">
-              {{ form.input(input.name, input.value, input.type, input.attributes) }}
-            </div>
-          {% endfor %}
-          <div class="form__row">
-            {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
-          </div>
-        </div>
-      </form>
     </div>
     <div class="greeting__content">
       <div class="greeting__content-header">
@@ -46,6 +33,22 @@
           <li>{{li}}</li>
         {% endfor %}
       </ul>
+    </div>
+    <div class="greeting__form">
+      <p class="greeting__form-title">{{options.form.title}}</p>
+      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
+        <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
+        <div class="form__content">
+          {% for input in options.form.items %}
+            <div class="form__row">
+              {{ form.input(input.name, input.value, input.type, input.attributes) }}
+            </div>
+          {% endfor %}
+          <div class="form__row">
+            {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
+          </div>
+        </div>
+      </form>
     </div>
     <div class="greeting__footer">
       <ul class="social">

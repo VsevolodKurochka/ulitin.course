@@ -19,8 +19,11 @@
       "Сожительство, что мешает создать семью?",
       "Как повысить самооценку?"
   	),
-		'form' 			=> $form,
-    'campaign_token'  => 'ne4qg',
+    'form'      => array(
+      'title'           => 'Запишитесь<br>на бесплатный<br>авторский курс<br>Марка Бартона',
+      'items'           => $form,
+      'campaign_token'  => 'ne4qg'
+    ),
 		'social'		=> $social
 	));
 ?>
