@@ -24,7 +24,6 @@
 
 		&-logo
 			+max(sm)
-				+mb(30px)
 				max-height: 70px
 
 	&__content
@@ -59,17 +58,15 @@
 			+min(md)
 				+pl(45px)
 
-			&-group
-				+ml(20px)
-				+min(sm)
-					+ml(37px)
-					align-self: flex-end
+			&-header
+				+max(sm)
+					+mb(30px)
 
 		&-title
 			+r()
 			z-index: 1
 			+mb(2px)
-			+fs(30px)
+			+fs(35px)
 			+fw(bold)
 			+lh(1.1)
 			text-transform: uppercase
@@ -87,7 +84,7 @@
 		&-author
 			text-transform: uppercase
 			+fw(bold)
-			+fs(25px)
+			+fs(20px)
 			+ff('secondary')
 			+lh(1.1)
 			+min(sm)
@@ -115,6 +112,7 @@
 		&-list
 			+r()
 			list-style: none
+			+pb(30px)
 
 			&:after
 				content: ""
