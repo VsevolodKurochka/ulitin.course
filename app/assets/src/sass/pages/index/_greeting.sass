@@ -28,6 +28,8 @@
 				max-height: 70px
 
 	&__content
+		+max(sm)
+			+ta(center)
 		+min(sm)
 			grid-row: 1 / 4
 
@@ -175,8 +177,9 @@
 			+ta(center)
 			text-transform: uppercase
 			+ff('secondary')
+			+lh(1.2)
 			+min(sm)
-				+mb(3vmax)
+				+mb(2vmax)
 				+fs(1.5vmax)
 
 	&__footer
