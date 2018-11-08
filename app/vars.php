@@ -33,19 +33,19 @@
 
 	$social = array(
 		array(
-			'image'	=> 'img/icon-inst.png',
+			'image'	=> 'img/icon-inst.svg',
 			'link'	=> 'https://www.instagram.com/markbarton_mb/'
 		),
 		array(
-			'image'	=> 'img/icon-vk.png',
+			'image'	=> 'img/icon-vk.svg',
 			'link'	=> 'https://vk.com/mark_barton'
 		),
 		array(
-			'image'	=> 'img/icon-fb.png',
+			'image'	=> 'img/icon-fb.svg',
 			'link'	=> 'https://www.facebook.com/markbartonrf/'
 		),
 		array(
-			'image'	=> 'img/icon-youtube.png',
+			'image'	=> 'img/icon-youtube.svg',
 			'link'	=> 'https://www.youtube.com/channel/UCdliAx3gHPrWju5VPetxWEw'
 		)
 	);
