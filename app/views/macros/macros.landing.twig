@@ -28,12 +28,14 @@
       </div>
     </div>
     <div class="greeting__text bg-brand-{{options.brand}}">
-      <p class="greeting__text-title">{{options.text.title|raw}}</p>
-      <ul class="greeting__text-list">
-        {% for li in options.text.list %}
-          <li class="greeting__text-list-item"><span class="greeting__text-list-item-quadro"></span>{{li}}</li>
-        {% endfor %}
-      </ul>
+      <div class="greeting__text-inner">
+        <p class="greeting__text-title">{{options.text.title|raw}}</p>
+        <ul class="greeting__text-list">
+          {% for li in options.text.list %}
+            <li class="greeting__text-list-item"><span class="greeting__text-list-item-quadro"></span>{{li}}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
     <div class="greeting__form">
       <div class="greeting__form-inner">
