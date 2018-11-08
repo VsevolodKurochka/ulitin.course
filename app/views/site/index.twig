@@ -2,9 +2,9 @@
 {% import 'macros/macros.landing.twig' as landing %}
 {% extends 'layouts/base.twig' %}
 
-{% set meta_title = title|striptags %}
-{% set meta_description = "#{subtitle} #{name}" %}
-{% set meta_image = 'img/greeting-image.jpg' %}
+{% set meta_title = "#{content.title} - #{content.subtitle}" %}
+{% set meta_description = "#{content.author}"|striptags %}
+{% set meta_image = 'img/intro-image.jpg' %}
 {% set meta_url = 'url' %}
 
 {% block meta %}
@@ -28,11 +28,10 @@
   landing.greeting({
     'brand': brand,
     'logo': logo,
-    'form': form,
-    'text': text,
-    'content': content,
     'video': video,
-    'list': list,
+    'content': content,
+    'text': text,
+    'form': form,
     'social': social
   })
 }}
