@@ -127,6 +127,7 @@
 				+a(null, null, null, 0)
 				+size(30%, 2px)
 				+bgc($color-white)
+
 			&:after
 				+b(0)
 
@@ -134,15 +135,27 @@
 				+pb(3vmax)
 				max-width: 90%
 
-			li
+			&-item
+				+r()
+				+pl(40px)
 				+offset('b', 15px)
 				+fs(14px)
 
 				&:nth-child(even)
 					+fw(bold)
 
+				&-quadro
+					+a(3px, null, null, 0)
+					+size(22px)
+					border: 2px solid #fff
+					&:before
+						content: ""
+						+a(2px, null, null, 2px)
+						+size(14px)
+						border: 5px solid #fff
+
 				+min(md)
-					+fs(18px)
+					+fs(1vmax)
 
 	&__form
 		@extend %greeting-common-padding
