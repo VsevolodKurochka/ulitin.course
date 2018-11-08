@@ -20,6 +20,7 @@
       "Как повысить самооценку?"
   	),
 		'form' 			=> $form,
+    'campaign_token'  => 'ne4qg',
 		'social'		=> $social
 	));
 ?>
