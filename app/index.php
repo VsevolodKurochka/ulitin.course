@@ -5,10 +5,10 @@
   $brand = '1';
 
   echo $twig->render('site/index.twig', array(
-  	'brand'			=> $brand,
-  	'logo'			=> 'img/logo.png',
-  	'video'			=> 'https://www.youtube.com/embed/H-7upfqm40w',
-  	'content'   => array(
+    'brand'     => $brand,
+    'logo'      => 'img/logo.png',
+    'video'     => 'https://www.youtube.com/embed/H-7upfqm40w',
+    'content'   => array(
       'title'        => 'Марк Бартон',
       'subtitle'     => 'психолог, телеведущий',
       'author'       => 'Автор онлайн курса <br> "Искусство быть Первой" и "Я-Женщина"',
@@ -29,6 +29,6 @@
       'items'           => $form,
       'campaign_token'  => 'ne4qg'
     ),
-		'social'		=> $social
-	));
+    'social'    => $social
+  ));
 ?>
