@@ -28,27 +28,30 @@
       </div>
     </div>
     <div class="greeting__text bg-brand-{{options.brand}}">
+      <p class="greeting__text-title">{{options.text.title|raw}}</p>
       <ul class="greeting__list">
-        {% for li in options.list %}
+        {% for li in options.text.list %}
           <li>{{li}}</li>
         {% endfor %}
       </ul>
     </div>
     <div class="greeting__form">
-      <p class="greeting__form-title">{{options.form.title}}</p>
-      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
-        <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
-        <div class="form__content">
-          {% for input in options.form.items %}
+      <div class="greeting__form-inner">
+        <p class="greeting__form-title">{{options.form.title|raw}}</p>
+        <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
+          <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
+          <div class="form__content">
+            {% for input in options.form.items %}
+              <div class="form__row">
+                {{ form.input(input.name, input.value, input.type, input.attributes) }}
+              </div>
+            {% endfor %}
             <div class="form__row">
-              {{ form.input(input.name, input.value, input.type, input.attributes) }}
+              {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
             </div>
-          {% endfor %}
-          <div class="form__row">
-            {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <div class="greeting__footer">
       <ul class="social">
