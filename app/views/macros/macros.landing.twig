@@ -21,11 +21,11 @@
       </div>
       <div class="greeting__content-body">
         <div class="greeting__content-body-inner">
-          <h1 class="greeting__content-title color-brand-{{options.brand}}">{{options.title|raw}}</h1>
-          <div class="greeting__content-body-group">
-            <h2 class="greeting__content-subtitle">{{options.subtitle}}</h2>
-            <h3 class="greeting__content-name">{{options.name}}</h3>
+          <div class="greeting__content-body-header">
+            <h1 class="greeting__content-title color-brand-{{options.brand}}">{{options.content.title|raw}}</h1>
+            <h2 class="greeting__content-subtitle">{{options.content.subtitle}}</h2>
           </div>
+          <h3 class="greeting__content-author">{{options.content.author|raw}}</h3>
         </div>
       </div>
     </div>

@@ -8,9 +8,11 @@
   	'brand'			=> $brand,
   	'logo'			=> 'img/logo.png',
   	'video'			=> 'https://www.youtube.com/embed/H-7upfqm40w',
-  	'title'			=> "Марк Бартон",
-  	'subtitle'	=> 'Бесплатный видео-курс',
-  	'name'			=> 'Марка Бартона',
+  	'content'   => array(
+      'title'        => 'Марк Бартон',
+      'subtitle'     => 'психолог, телеведущий',
+      'author'       => 'Автор онлайн курса<br>"Искусство быть Первой" и "Я-Женщина"',
+    ),
     'text'      => array(
       'title'   => 'На курсе вы найдете<br>ответы на следующие<br>вопросы:',
       'list'    => array(
