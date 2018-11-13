@@ -27,7 +27,8 @@
     'form'      => array(
       'title'           => 'Запишитесь<br>на <span class="color-brand-'.$brand.'">бесплатный</span><br>авторский курс<br>Марка Бартона',
       'items'           => $form,
-      'campaign_token'  => 'ne4qg'
+      'campaign_token'  => 'ne4qg',
+      'thankyou_url'    => 'http://promo.markbarton.ru/videokurs/thx'
     ),
     'social'    => $social
   ));

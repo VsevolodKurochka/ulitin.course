@@ -40,8 +40,11 @@
     <div class="greeting__form">
       <div class="greeting__form-inner">
         <p class="greeting__form-title">{{options.form.title|raw}}</p>
-        <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
+        <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" id="landing-form" method="POST">
+          <input type="hidden" name="thankyou_url" value="{{options.form.thankyou_url}}"/>
+          <input type="hidden" name="forward_data" value="post" />
           <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
+          <input type="hidden" name="custom_mobile_phone" value="">
           <div class="form__content">
             {% for input in options.form.items %}
               <div class="form__row">

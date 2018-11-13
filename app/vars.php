@@ -21,11 +21,11 @@
 			)
 		),
 		array(
-			'name'	=> 'custom_mobile_phone',
+			'name'	=> 'phone',
 			'value'	=> '',
-			'type'	=> 'phone',
+			'type'	=> 'tel',
 			'attributes' 			=> array(
-				'placeholder' 	=> 'Телефон',
+				'placeholder' 	=> '+7 (000) 000-00-00',
 				'class' 				=> 'form__control'
 			)
 		)

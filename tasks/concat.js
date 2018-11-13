@@ -11,7 +11,7 @@ import {reload} 				from './browserSync';
 
 const concatSrc = [
 	`${folders.assetsSrc}/js/libs/jquery.min.js`,
-	`${folders.assetsSrc}/js/libs/smooth-scroll.min.js`,
+	`${folders.assetsSrc}/js/libs/inputmask.min.js`,
 	`${folders.assetsSrc}/js/libs/jquery.main.babel.min.js`,
 	`${folders.assetsSrc}/js/libs/vanilla.main.babel.min.js`
 ];
@@ -22,4 +22,9 @@ gulp.task('concat', () =>
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(`${folders.assetsBuild}/js`))
+);
+
+// Task `concat:watch`
+gulp.task('concat:watch', () =>
+	gulp.watch(concatSrc, gulp.series('concat', reload))
 );

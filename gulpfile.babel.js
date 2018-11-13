@@ -27,6 +27,8 @@ gulp.task(
 		'babel',
 		'concat',
 		gulp.parallel(
+			'babel:watch',
+			'concat:watch',
 			'sass',
 			'sass:watch',
 			'image',
