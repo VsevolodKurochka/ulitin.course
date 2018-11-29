@@ -53,7 +53,7 @@ $contacts = $amo->q($pathСontact, $contact);
 if(!$contacts){
 	die('Контакт не добавлен');
 }else{
-	header('Location: ' . 'http://promo.markbarton.ru/videokurs/thx')
+	header('Location: ' . 'http://promo.markbarton.ru/videokurs/thx');
 }
 
 //выводим дамп с сделками из ответа

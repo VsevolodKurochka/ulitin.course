@@ -28,7 +28,7 @@
       'title'           => 'Запишитесь<br>на <span class="color-brand-'.$brand.'">бесплатный</span><br>авторский курс<br>Марка Бартона',
       'items'           => $form,
       'campaign_token'  => 'nxyKT',
-      'thankyou_url'    => 'http://promo.markbarton.ru/videokurs/thx'
+      'thankyou_url'    => 'http://promo.markbarton.ru/videokurs/load.php'
     ),
     'social'    => $social
   ));

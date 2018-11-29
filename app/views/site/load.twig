@@ -1,0 +1,42 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% set meta_title = "#{content.title} - #{content.subtitle}" %}
+{% set meta_description = "#{content.author}"|striptags %}
+{% set meta_image = 'img/intro-image.jpg' %}
+{% set meta_url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(meta_title, meta_description, meta_image, meta_url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css(false, "https://fonts.googleapis.com/css?family=Cormorant+SC:700|Ubuntu:300,700&amp;subset=cyrillic")}}
+{{ macros.css(true, "css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+	<section class="load">
+		<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+		<form action="amocrm.php" accept-charset="utf-8" id="landing-form-2" method="POST" style="display: none">
+			<input type="hidden" name="first_name" value="{{first_name}}">
+			<input type="hidden" name="phone" value="{{phone}}">
+			<input type="hidden" name="email" value="{{email}}">
+		</form>
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+				document.getElementById('landing-form-2').submit();
+			});
+		</script>
+	</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

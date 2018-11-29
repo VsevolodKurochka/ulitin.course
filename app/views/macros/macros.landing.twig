@@ -8,68 +8,6 @@
   {{form.button('button', "#{default} #{class}", text, attributes)}}
 {% endmacro %}
 
-{% macro greeting_(options) %}
-  {% import _self as landing %}
-  {% import "macros/macros.form.twig" as form %}
-  <section class="greeting">
-    <div class="greeting__header">
-      <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__header-logo">
-    </div>
-    <div class="greeting__content">
-      <div class="greeting__content-header">
-        <iframe src="https://www.youtube-nocookie.com/embed/H-7upfqm40w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="greeting__content-body">
-        <div class="greeting__content-body-header">
-          <h1 class="greeting__content-title color-brand-{{options.brand}}">{{options.content.title|raw}}</h1>
-          <h2 class="greeting__content-subtitle">{{options.content.subtitle}}</h2>
-        </div>
-        <h3 class="greeting__content-author">{{options.content.author|raw}}</h3>
-      </div>
-    </div>
-    <div class="greeting__text bg-brand-{{options.brand}}">
-      <div class="greeting__text-inner">
-        <p class="greeting__text-title">{{options.text.title|raw}}</p>
-        <ul class="greeting__text-list">
-          {% for li in options.text.list %}
-            <li class="greeting__text-list-item"><span class="greeting__text-list-item-quadro"></span>{{li}}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="greeting__form">
-      <div class="greeting__form-inner">
-        <p class="greeting__form-title">{{options.form.title|raw}}</p>
-        <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" id="landing-form" method="POST">
-          <input type="hidden" name="thankyou_url" value="{{options.form.thankyou_url}}"/>
-          <input type="hidden" name="forward_data" value="post" />
-          <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
-          <input type="hidden" name="custom_mobile_phone" value="">
-          <div class="form__content">
-            {% for input in options.form.items %}
-              <div class="form__row">
-                {{ form.input(input.name, input.value, input.type, input.attributes) }}
-              </div>
-            {% endfor %}
-            <div class="form__row">
-              {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="greeting__footer">
-      <ul class="social">
-        {% for item in options.social %}
-          <li class="social__item">
-            <a href="{{item.link}}" target="_blank">{{landing.image(item.image, options.title|striptags, 'social__item-image')}}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-{% endmacro %}
-
 {% macro greeting(options) %}
   {% import _self as landing %}
   {% import "macros/macros.form.twig" as form %}
@@ -102,7 +40,7 @@
     <div class="greeting__form">
       <div class="greeting__form-inner">
         <p class="greeting__form-title">{{options.form.title|raw}}</p>
-        <form action="amocrm.php" accept-charset="utf-8" class="form form_block" id="landing-form_" method="POST">
+        <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" id="landing-form-1" method="POST">
           <input type="hidden" name="thankyou_url" value="{{options.form.thankyou_url}}"/>
           <input type="hidden" name="forward_data" value="post" />
           <input type="hidden" name="campaign_token" value="{{options.form.campaign_token}}" />
@@ -117,6 +55,55 @@
               {{ form.button("submit", "form__submit btn btn_brand-#{options.brand} effect effect_bounce-top", "Записаться на курс") }}
             </div>
           </div>
+        </form>
+      </div>
+    </div>
+    <div class="greeting__footer">
+      <ul class="social">
+        {% for item in options.social %}
+          <li class="social__item">
+            <a href="{{item.link}}" target="_blank">{{landing.image(item.image, options.title|striptags, 'social__item-image')}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro greeting_(options) %}
+  {% import _self as landing %}
+  {% import "macros/macros.form.twig" as form %}
+  <section class="greeting">
+    <div class="greeting__header">
+      <img src="{{path}}/{{options.logo}}" alt="{{options.title|striptags}}" class="greeting__header-logo">
+    </div>
+    <div class="greeting__content">
+      <div class="greeting__content-header">
+        <iframe src="https://www.youtube-nocookie.com/embed/H-7upfqm40w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="greeting__content-body">
+        <div class="greeting__content-body-header">
+          <h1 class="greeting__content-title color-brand-{{options.brand}}">{{options.content.title|raw}}</h1>
+          <h2 class="greeting__content-subtitle">{{options.content.subtitle}}</h2>
+        </div>
+        <h3 class="greeting__content-author">{{options.content.author|raw}}</h3>
+      </div>
+    </div>
+    <div class="greeting__text bg-brand-{{options.brand}}">
+      <div class="greeting__text-inner">
+        <p class="greeting__text-title">{{options.text.title|raw}}</p>
+        <ul class="greeting__text-list">
+          {% for li in options.text.list %}
+            <li class="greeting__text-list-item"><span class="greeting__text-list-item-quadro"></span>{{li}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="greeting__form">
+      <div class="greeting__form-inner">
+        <p class="greeting__form-title">{{options.form.title|raw}}</p>
+        <form action="amocrm.php" accept-charset="utf-8" id="landing-form-2" method="POST" style="display: none">
+          <input type="text">
         </form>
       </div>
     </div>

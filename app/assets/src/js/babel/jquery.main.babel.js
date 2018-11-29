@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#landing-form').submit(function(e){
+	$('#landing-form-1').submit(function(e){
 		//e.preventDefault();
 		var form = $(this);
 		var phoneVal = form.find('#phone').val();
