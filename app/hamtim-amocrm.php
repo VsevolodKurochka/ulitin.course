@@ -12,7 +12,7 @@ if (!class_exists('HamtimAmocrm')) {
 		var $subdomain;
 		var $auth;
 		
-		function HamtimAmocrm($login,$api,$subdomain)
+		public function __construct($login,$api,$subdomain)
 		{
 			$this->settings = new stdClass();
 			$this->settings->amocrm = new stdClass();
