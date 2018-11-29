@@ -79,7 +79,7 @@ if (!class_exists('HamtimAmocrm')) {
 			$curl=curl_init(); #Сохраняем дескриптор сеанса cURL
 			#Устанавливаем необходимые опции для сеанса cURL
 			curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
-			curl_setopt($curl,CURLOPT_USERAGENT,'amoCRM-API-client/1.0');
+			curl_setopt($curl,CURLOPT_USERAGENT,'amoCRM-API-client-undefined/2.0');
 			curl_setopt($curl,CURLOPT_URL,$link);
 			if($ifModifiedSince)
 			{
@@ -89,8 +89,8 @@ if (!class_exists('HamtimAmocrm')) {
 			}
 			if( count($fields) ){
 				curl_setopt($curl,CURLOPT_CUSTOMREQUEST,'POST');
-				curl_setopt($curl,CURLOPT_POSTFIELDS,json_encode($fields));
-				$httpHeader[] = 'Content-Type: application/json';
+				curl_setopt($curl,CURLOPT_POSTFIELDS,http_build_query($fields));
+				$httpHeader[] = 'Accept: application/json';
 			}
 			curl_setopt($curl,CURLOPT_HTTPHEADER, $httpHeader);
 			curl_setopt($curl,CURLOPT_HEADER,false);
