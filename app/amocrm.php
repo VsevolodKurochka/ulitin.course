@@ -12,11 +12,8 @@ $amo = new HamtimAmocrm('info@markbarton.ru', '05bcbbb4c6b1330bfd0b80895e8ffa590
 if(!$amo->auth) die('Нет соединения с amoCRM');
 
 //все примеры запросов на https://developers.amocrm.ru/rest_api/
-
-
 //получаем список сделок в работе
 $pathСontact = '/api/v2/contacts';
-
 //если передается пустой массив fields, то данные post не передаются в заголовке запроса
 $contact = array(
 	'add'	=> array(
@@ -46,7 +43,6 @@ $contact = array(
 		)
 	)
 );
-//1486336
 //делаем запрос
 $contacts = $amo->q($pathСontact, $contact);
 	
